@@ -1,8 +1,25 @@
-html {
+body {
     background: brown;
+}
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 1px 1px 2px #ccc;
+}
+
+#feed {
+    background: #d1af42;
+    border-radius: 10px;
+    padding: 10px;
 }
 #feed img {
     width: 60px;
     height: 60px;
+}
+
+#feed a,
+#feed a:visited {
+    color: whitesmoke;
 }
 

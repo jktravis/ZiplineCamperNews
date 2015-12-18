@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Free Code Camp Camper News</title>
-    <link href="static/vendor/bootstrap/dist/css/bootstrap.css">
-    <link href="build/css/main.css">
+    <link rel="stylesheet" href="static/vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="build/css/main.css">
 
     <script src="static/vendor/jquery/dist/jquery.min.js"></script>
     <script src="static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -14,24 +14,26 @@
 </head>
 <body>
 <div class="container-fluid">
-    <h1>Free Code Camp Camper News</h1>
-    <section id="feed" class="row"></section>
+    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-10 col-xs-12">
+        <h1>Free Code Camp Camper News</h1>
+        <section id="feed" class="row"></section>
+    </div>
 </div>
 
 <script id="post-template" type="text/x-handlebars-template">
     {{#each entries}}
     <article class="row">
-        <div class="col-md-4">
+        <div class="col-lg-12">
             {{#if image}}
                 <img src="{{image}}" alt="{{headline}}">
             {{else}}
                 <img src="{{author.picture}}" alt="{{author.username}}">
             {{/if}}
-            <p><a href="{{link}}">{{headline}}</a></p>
-            <p>{{user}}</p>
-            <p>Votes: {{numVotes}}</p>
-            <p>Posted on: {{timePosted}}</p>
-            <p><a href="{{storyLink}}">Story Link on FCC</a></p>
+            <p><a class="headline" href="{{link}}">{{headline}}</a></p>
+            <p class="votes">Votes: {{numVotes}}</p>
+            <p class="posted-by">Posted by: <a href="http://www.freecodecamp.com/{{author.username}}">{{author.username}}</a></p>
+            <p class="posted-date">Posted on: {{timePosted}}</p>
+            <p class="fcc-link"><a href="{{storyLink}}">Story Link on FCC</a></p>
         </div>
     </article>
     {{/each}}
