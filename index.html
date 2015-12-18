@@ -3,8 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Free Code Camp Camper News</title>
+    <link href="static/vendor/bootstrap/dist/css/bootstrap.css">
+    <link href="static/css/main.css">
+
+    <script src="static/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="static/vendor/handlebars/handlebars.min.js"></script>
+
+    <script src="build/js/main.js"></script>
 </head>
 <body>
+<div class="container-fluid">
+    <h1>Free Code Camp Camper News</h1>
+    <section id="feed" class="row"></section>
+</div>
+
+<script id="post-template" type="text/x-handlebars-template">
+    {{#each entries}}
+    <article class="row">
+        <div class="col-md-4">
+            {{#if image}}
+                <img src="{{image}}" alt="{{headline}}">
+            {{else}}
+                <img src="{{author.picture}}" alt="{{author.username}}">
+            {{/if}}
+            <p><a href="{{link}}">{{headline}}</a></p>
+            <p>{{user}}</p>
+            <p>Votes: {{upvotes.length}}</p>
+            <p>Posted on: {{timePosted}}</p>
+            <p>Story Link: {{storyLink}}</p>
+        </div>
+    </article>
+    {{/each}}
+</script>
 
 </body>
 </html>
