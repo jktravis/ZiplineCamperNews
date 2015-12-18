@@ -9,14 +9,15 @@ body {
 h1 {
     text-align: center;
     color: whitesmoke;
-    text-shadow: 1px 1px 2px #ccc;
+    text-shadow: 3px 1px 2px #2f2f2f;
 }
 
 article {
-    background: rgba(186, 164, 85, 0.9);
+    background: rgba(186, 168, 101, 0.9);
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
+    box-shadow: 2px 1px 2px #2f2f2f;
 }
 
 #feed img {
