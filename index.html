@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container-fluid">
-    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-10 col-xs-12">
+    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
         <h1>Free Code Camp Camper News</h1>
         <section id="feed" class="row"></section>
     </div>
@@ -29,11 +29,11 @@
             {{else}}
                 <img src="{{author.picture}}" alt="{{author.username}}">
             {{/if}}
-            <p><a class="headline" href="{{link}}">{{headline}}</a></p>
-            <p class="votes">Votes: {{numVotes}}</p>
-            <p class="posted-by">Posted by: <a href="http://www.freecodecamp.com/{{author.username}}">{{author.username}}</a></p>
-            <p class="posted-date">Posted on: {{timePosted}}</p>
-            <p class="fcc-link"><a href="{{storyLink}}">Story Link on FCC</a></p>
+            <p class="headline"><a href="{{link}}">{{headline}}</a></p>
+            <p class="votes">Votes: <strong>{{numVotes}}</strong></p>
+            <p class="posted-by">Posted by: <strong><a href="http://www.freecodecamp.com/{{author.username}}">{{author.username}}</a></strong></p>
+            <p class="posted-date">Posted on: <strong>{{timePosted}}</strong></p>
+            <p class="fcc-link"><strong><a href="{{storyLink}}">Story Link on FCC</a></strong></p>
         </div>
     </article>
     {{/each}}

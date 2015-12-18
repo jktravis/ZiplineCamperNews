@@ -8,14 +8,18 @@ h1 {
     text-shadow: 1px 1px 2px #ccc;
 }
 
-#feed {
+article {
     background: #d1af42;
     border-radius: 10px;
     padding: 10px;
+    margin: 10px;
 }
+
 #feed img {
     width: 60px;
     height: 60px;
+    display: inline-block;
+    float: left;
 }
 
 #feed a,
@@ -23,3 +27,20 @@ h1 {
     color: whitesmoke;
 }
 
+.headline {
+    margin: 10px 70px;
+    padding: 10px 5px;
+    font-size: 1.5em;
+}
+
+.votes,
+.posted-by,
+.posted-date {
+    color: #6b5d1e;
+}
+
+.votes > strong,
+.posted-by > strong,
+.posted-date > strong {
+    color: #2f2f2f;
+}
