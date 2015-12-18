@@ -18,5 +18,4 @@ $(document).ready(function () {
     html = template(context);
     $('#feed').html(html);
   });
-})
-;
+});
