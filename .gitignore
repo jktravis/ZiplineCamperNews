@@ -4,4 +4,3 @@
 *.swp
 static/vendor/
 node_modules/
-index.html
