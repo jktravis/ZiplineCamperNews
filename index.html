@@ -29,12 +29,12 @@
             {{else}}
                 <img src="{{author.picture}}" alt="{{author.username}}">
             {{/if}}
-            <p class="headline"><a href="{{link}}">{{headline}}</a></p>
+            <p class="headline"><a href="{{link}}" target="_blank">{{headline}}</a></p>
             <ul>
-                <li>Posted by: <strong><a href="http://www.freecodecamp.com/{{author.username}}">{{author.username}}</a></strong></li>
+                <li>Posted by: <strong><a href="http://www.freecodecamp.com/{{author.username}}" target="_blank">{{author.username}}</a></strong></li>
                 <li>Votes: <strong>{{numVotes}}</strong></li>
                 <li>Posted on: <strong>{{timePosted}}</strong></li>
-                <li><strong><a href="{{storyLink}}">Free Code Camp Link</a></strong></li>
+                <li><strong><a href="{{storyLink}}" target="_blank">Free Code Camp Link</a></strong></li>
             </ul>
         </div>
     </article>
